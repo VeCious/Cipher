@@ -1,0 +1,4 @@
+# Ignore VSCode workspace folder
+/.vscode/
+# Ignore leaderboard file
+/config/CipherLeaderboard.json

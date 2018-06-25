@@ -1,0 +1,319 @@
+{
+    "output_file": "config/CipherConfig.json",
+
+    "command": {
+        "type": "textbox",
+        "label": "Base Command",
+        "value": "!cipher",
+        "tooltip": "Main command to generate an encounter for the user.",
+        "group": "Command Settings"
+    },
+    "start": {
+        "type": "textbox",
+        "label": "Start Command",
+        "value": "!start",
+        "tooltip": "When the user generates an Encounter (!cipher) or a random Encounter has occured for the user, this command will start the mini-game.",
+        "group": "Command Settings"
+    },
+    "help": {
+        "type": "textbox",
+        "label": "Help Option",
+        "value": "help",
+        "tooltip": "Optional Argument for the Base command (!cipher), displays the help response message 'helpMessage'.\n\nUsage: !cipher help",
+        "group": "Optional Settings"
+    },
+    "enable": {
+        "type": "textbox",
+        "label": "Enable Option",
+        "value": "enable",
+        "tooltip": "Optional Argument for the Base command (!cipher), allows the user to exclude themself from random Encounters, if random Encounters are enabled.\n\nUsage: !cipher enable",
+        "group": "Optional Settings"
+    },
+    "disable": {
+        "type": "textbox",
+        "label": "Disable Option",
+        "value": "disable",
+        "tooltip": "Optional Argument for the Base command (!cipher), allows the user to include themself for random Encounters (Enabled for every user by default), if random Encounters are enabled.\n\nUsage: !cipher disable",
+        "group": "Optional Settings"
+    },
+    "stats": {
+        "type": "textbox",
+        "label": "Statistics Option",
+        "value": "stats",
+        "tooltip": "Optional Argument for the Base command (!cipher), displays user specific statistics.\n\nUsage: !cipher stats",
+        "group": "Optional Settings"
+    },
+    "ranks": {
+        "type": "textbox",
+        "label": "Leaderboard Option",
+        "value": "top",
+        "tooltip": "Optional Argument for the Base command (!cipher), displays top users.\n\nUsage: !cipher top",
+        "group": "Optional Settings"
+    },
+    "claim": {
+        "type": "textbox",
+        "label": "Claim Option",
+        "value": "N/A",
+        "tooltip": "NOT IMPLEMENTED",
+        "group": "Optional Settings"
+    },
+
+    "blacklist": {
+        "type": "textbox",
+        "label": "Exclude Username",
+        "value": "HypeBot",
+        "tooltip": "Allows you to exclude usernames from generating random encouters, will not exclude user if s/he changed their name. Usernames should be separated by '|'.\n\nExample:\nHypeBot|VeCious|SomeoneWorseThanVe|PythonIsAwesome",
+        "group": "Blacklist"
+    },
+
+    "cost": {
+        "type": "numberbox",
+        "label": "Command Cost",
+        "value": 10,
+        "tooltip": "Amount of currency user needs to pay to use the base command (!cipher).",
+        "group": "Cost Settings"
+    },
+    "costFail": {
+        "type": "numberbox",
+        "label": "Failure Cost",
+        "value": 10,
+        "tooltip": "Amount of currency user will lose when failing to solve the cipher, this amount will be to the cost for the command.",
+        "group": "Cost Settings"
+    },
+    "cooldownRandom": {
+        "type": "slider",
+        "label": "Random Encounter Cooldown",
+        "min": 0,
+        "max": 100,
+        "ticks": 0.1,
+        "value": 15,
+        "tooltip": "Cooldown for random encounters (if enabled), cooldown is in Minutes.",
+        "group": "Cooldown Settings"
+    },
+    "cooldownUser": {
+        "type": "slider",
+        "label": "User Cooldown",
+        "min": 0,
+        "max": 100,
+        "ticks": 0.1,
+        "value": 5,
+        "tooltip": "User specific cooldown, applied if Global Cooldown is not enabled, cooldown is in Minutes.",
+        "group": "Cooldown Settings"
+    },
+    "cooldownGlobal": {
+        "type": "slider",
+        "label": "Global Cooldown",
+        "min": 0,
+        "max": 100,
+        "ticks": 0.1,
+        "value": 0,
+        "tooltip": "Global cooldown, overwrites user specific cooldown, set to 0 to disable, cooldown is in Minutes.",
+        "group": "Cooldown Settings"
+    },
+
+    "codeLength": {
+        "type": "slider",
+        "label": "Code Length",
+        "min": 4,
+        "max": 14,
+        "ticks": 1,
+        "value": 6,
+        "tooltip": "How long the code sequence should be.\nRecommended: 4-8",
+        "group": "Cipher Settings"
+    },
+    "codeLengthHard": {
+        "type": "slider",
+        "label": "Code Length (Hard Mode)",
+        "min": 4,
+        "max": 14,
+        "ticks": 1,
+        "value": 9,
+        "tooltip": "How long the code sequence should be on hard mode.\nRecommended: 9-12",
+        "group": "Cipher Settings"
+    },
+    "codeLengthScramble": {
+        "type": "slider",
+        "label": "Scramble string Length",
+        "min": 16,
+        "max": 32,
+        "ticks": 1,
+        "value": 24,
+        "tooltip": "How long the scrambled string should be.\nRecommended: 16-32\n\n** NOTE ** Keep in mind that the chat has a character limit (360).",
+        "group": "Cipher Settings"
+    },
+    "timer": {
+        "type": "numberbox",
+        "label": "Time Limit",
+        "value": 10,
+        "tooltip": "Amount time in seconds the user has to input correct code.",
+        "group": "Timer Settings"
+    },
+    "timerHard": {
+        "type": "numberbox",
+        "label": "Time Limit (Hard Mode)",
+        "value": 10,
+        "tooltip": "Amount time in seconds the user has to input correct code on hard mode.",
+        "group": "Timer Settings"
+    },
+    "timerStart": {
+        "type": "numberbox",
+        "label": "Start Timer",
+        "value": 1,
+        "tooltip": "Amount of time in minutes the user has to run the start command after a cipher has been generated.",
+        "group": "Timer Settings"
+    },
+    "reward": {
+        "type": "numberbox",
+        "label": "Currency Reward",
+        "value": 12,
+        "tooltip": "Amount of currency user can win by solving a cipher.",
+        "group": "Reward Settings"
+    },
+    "rewardHard": {
+        "type": "numberbox",
+        "label": "Currency Reward (Hard Mode)",
+        "value": 24,
+        "tooltip": "Amount of currency user can win by solving a cipher, on hard mode.",
+        "group": "Reward Settings"
+    },
+
+    "random": {
+        "type": "slider",
+        "label": "Random Encounters",
+        "min": 0,
+        "max": 100,
+        "ticks": 0.01,
+        "value": 12.32,
+        "tooltip": "Chance for users to trigger random encounters while chatting, set to 0 to disable. Consider how active your chat is when setting this value.",
+        "group": "Chance Settings"
+    },
+    "hardMode": {
+        "type": "slider",
+        "label": "Hard Mode",
+        "min": 0,
+        "max": 100,
+        "ticks": 0.01,
+        "value": 18.68,
+        "tooltip": "Chance for generated ciphers to be harder, set to 0 to disable.",
+        "group": "Chance Settings"
+    },
+
+    "msgEncounter": {
+        "type": "textbox",
+        "label": "Encounter Response",
+        "value": "@$user you have generated a cipher, type [$start] to start decoding. Use [$help] to view instructions. [$time minute/s left]",
+        "tooltip": "Response when user generates a cipher or triggers a random encounter.",
+        "group": "Responses"
+    },
+    "msgStart": {
+        "type": "textbox",
+        "label": "Start Response",
+        "value": "@$user your cipher is [$cipher], extract the code from it. [$time seconds left]!",
+        "tooltip": "Response when user starts decoding a generated cipher.",
+        "group": "Responses"
+    },
+    "msgCurrency": {
+        "type": "textbox",
+        "label": "Not enough Currency Response",
+        "value": "You do not have enough $currency ($points), $cost needed!",
+        "tooltip": "Response when the base command is on cooldown, does not apply to options such as 'stats'.",
+        "group": "Responses"
+    },
+    "msgCooldown": {
+        "type": "textbox",
+        "label": "Cooldown Response",
+        "value": "The generator is cooling down, try again in [$cooldown]!",
+        "tooltip": "Response when the base command is on cooldown, does not apply to options such as 'stats'.",
+        "group": "Responses"
+    },
+    "msgTimeout": {
+        "type": "textbox",
+        "label": "Timeout Response",
+        "value": "/w cipher timed-out after $time, try again in [$cooldown].",
+        "tooltip": "Response when a generated cipher has timed-out.",
+        "group": "Responses"
+    },
+    "msgSolved": {
+        "type": "textbox",
+        "label": "Solved Response",
+        "value": "Congratulations @$user! You have earned $points $currency by solving the cipher in $time seconds.",
+        "tooltip": "Response when the user has successfully solved a cipher.",
+        "group": "Responses"
+    },
+    "msgFailed": {
+        "type": "textbox",
+        "label": "Failed Response",
+        "value": "@$user you have failed to input the correct code ($code) in time ($time), good luck next time!",
+        "tooltip": "Response when the user fails to type in the correct code in time, or types in the wrong code.",
+        "group": "Responses"
+    },
+    "msgEnabled": {
+        "type": "textbox",
+        "label": "Encounter Enabled Response",
+        "value": "/w you have enabled random cipher encounters, to disable them use [$disable]",
+        "tooltip": "Notify the user that s/he has enabled random encounters.",
+        "group": "Responses"
+    },
+    "msgDisabled": {
+        "type": "textbox",
+        "label": "Encounter Disabled Response",
+        "value": "/w you have disabled random cipher encounters, to enable them again use [$enable]",
+        "tooltip": "Notify the user that s/he has disabled random encounters.",
+        "group": "Responses"
+    },
+    "msgStats": {
+        "type": "textbox",
+        "label": "Stats Response",
+        "value": "/w Attempts: $attempts | Encounter: $encounter | Solved: $solved | Record: $record | Average: $average | Rate: $success",
+        "tooltip": "Display User statistics.",
+        "group": "Responses"
+    },
+    "msgRanks": {
+        "type": "textbox",
+        "label": "Leaderboard Response",
+        "value": "Cipher Leaderboard: $top",
+        "tooltip": "Display the Leaderboard",
+        "group": "Responses"
+    },
+    "msgHelp": {
+        "type": "textbox",
+        "label": "Help Response",
+        "value": "/w $command generates a cipher, $start to start deciphering a cipher. $stats lists stats, $ranks lists top 3 crackers. $enable/$disable enables or disables random encounters. Extract the number sequence from the cipher to solve it.",
+        "tooltip": "Display the instructions.",
+        "group": "Responses"
+    },
+
+    "update": {
+        "type": "checkbox",
+        "label": "Check for Updates",
+        "value": true,
+        "tooltip": "If enabled, the script will check for newer version on Initialization.",
+        "group": "Updates"
+    },
+    "github": {
+        "type": "button",
+        "label": "Open Releases",
+        "tooltip": "Open GitHub Releases",
+        "function": "OpenReleases",
+        "wsevent": "",
+        "group": "Updates"
+    },
+
+    "clear": {
+        "type": "button",
+        "label": "Clear Leaderboard",
+        "tooltip": "Clears Leaderboard",
+        "function": "ClearLeaderboard",
+        "wsevent": "",
+        "group": "Reset"
+    },
+    "config": {
+        "type": "button",
+        "label": "Reset Configuration",
+        "tooltip": "Resets the Configuration files.",
+        "function": "ResetSettings",
+        "wsevent": "",
+        "group": "Reset"
+    }
+
+}
